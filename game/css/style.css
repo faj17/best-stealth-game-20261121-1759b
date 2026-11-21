@@ -1,0 +1,39 @@
+/* The Silent Stacks — page chrome around the canvas. The game itself
+   draws everything; this file only centres the 1280x720 canvas on a dark
+   page and scales it down on smaller windows. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #07080f;
+  color: #e8dcc0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+canvas {
+  width: min(1280px, 96vw);
+  height: auto;
+  display: block;
+  border: 2px solid #c8a95a;
+  border-radius: 4px;
+  background: #0a0c16;
+  cursor: crosshair;
+}
+
+.note {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(232, 220, 192, 0.6);
+}
